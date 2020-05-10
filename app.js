@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
+const htmlRoute = require("./routes/html-routes");
+const apiRoute = require("./routes/api-routes");
 
 app = express();
 
 app.use(express.static("public"));
 
-app.get("*", (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, "./public/index.html"));
-});
+htmlRoute(app);
+apiRoute(app);
 
 module.exports = app;

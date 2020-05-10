@@ -51,6 +51,7 @@ This project is deployed on Heroku. The link to web app is:
 | Package | Documentation | Notes
 | ----------- | ----------- | ----------- |
 | `jest` | [Jest](https://jestjs.io/docs/en/getting-started) | Delightful JavaScript Testing Framework
+| `supertest` | [SuperTest](https://www.npmjs.com/package/supertest) | Used is testing express routes
 | `coveralls` | [Coveralls](https://www.npmjs.com/package/coveralls) | Great code coverage reporting tool
 |  |  |
 
@@ -61,6 +62,9 @@ This project is deployed on Heroku. The link to web app is:
 CI/CD means Continuous Integration / Continous Development. This is a development practice that means deploying your code as soon as you develop it automatically.
 
 I'm using [travis-ci](https://travis-ci.com/) for this. It is very easy to setup and use. You will need to create a file called `.travis.yml` at the root of your project. After that go to [github marketplace](https://github.com/marketplace/travis-ci) to add travis-ci to your github. It also gives nice build badges that can be added to the readme.
+
+`travis-ci` can also be used to deploy the code to heroku automatically everytime any code is pushed to `master` branch of the github repo. Here is the documentation that I used:
+https://docs.travis-ci.com/user/deployment/heroku/. You can also check my `.travis.yml` file to see how it is setup.
 
 ---
 
