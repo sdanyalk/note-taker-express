@@ -9,7 +9,7 @@ This is the solution for homework assignment-11 of University of Arizona Coding 
 ---
 
 # Note Taker Express
-Note Taker application can be used to write, save, and delete notes. This application uses an `express` backend, and save and retrieve note data from a JSON file.
+Note Taker application can be used to write, save, and delete notes. This application uses an `express` backend, saves and retrieves note data to/from a JSON file.
 
 ---
 
@@ -51,7 +51,7 @@ This project is deployed on Heroku. The link to web app is:
 | Package | Documentation | Notes
 | ----------- | ----------- | ----------- |
 | `jest` | [Jest](https://jestjs.io/docs/en/getting-started) | Delightful JavaScript Testing Framework
-| `supertest` | [SuperTest](https://www.npmjs.com/package/supertest) | Used is testing express routes
+| `supertest` | [SuperTest](https://www.npmjs.com/package/supertest) | Used in testing express routes
 | `coveralls` | [Coveralls](https://www.npmjs.com/package/coveralls) | Great code coverage reporting tool
 |  |  |
 
