@@ -25,8 +25,6 @@ module.exports = (app) => {
 
     app.delete("/api/notes/:id", async (req, res) => {
         try {
-            console.log("here");
-
             const store = new Store();
             await store.deleteNote(req.params.id);
 
