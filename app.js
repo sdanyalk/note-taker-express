@@ -5,9 +5,11 @@ const apiRoute = require("./routes/api-routes");
 
 app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-htmlRoute(app);
 apiRoute(app);
+htmlRoute(app);
 
 module.exports = app;
