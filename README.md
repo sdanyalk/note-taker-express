@@ -53,6 +53,7 @@ This project is deployed on Heroku. The link to web app is:
 | `jest` | [Jest](https://jestjs.io/docs/en/getting-started) | Delightful JavaScript Testing Framework
 | `supertest` | [SuperTest](https://www.npmjs.com/package/supertest) | Used in testing express routes
 | `coveralls` | [Coveralls](https://www.npmjs.com/package/coveralls) | Great code coverage reporting tool
+| `uuid` | [UUID](https://www.npmjs.com/package/uuid) | Generates UUID that complies with RFC4122 for a unique id
 |  |  |
 
 ---
