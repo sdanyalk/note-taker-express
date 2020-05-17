@@ -6,6 +6,7 @@ class Store {
 
     async getNotes() {
         const notes = await readFileAsync("db/db.json", "utf8");
+        
         const parsedNotes = JSON.parse(notes);
 
         return parsedNotes;
@@ -28,6 +29,8 @@ class Store {
         const filteredNotes = notes.filter(note => note.id != id);
 
         await writeFileAsync("db/db.json", JSON.stringify(filteredNotes));
+
+        return true;
     };
 };
 

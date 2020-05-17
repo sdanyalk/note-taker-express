@@ -1,12 +1,14 @@
 const mockGetNotes = jest.fn();
-const mockAddNotes = jest.fn();
+const mockAddNote = jest.fn();
+const mockDeleteNote = jest.fn();
 
 const mock = jest.fn().mockImplementation(() => {
-    return { getNotes: mockGetNotes, addNotes: mockAddNotes };
+    return { getNotes: mockGetNotes, addNote: mockAddNote, deleteNote: mockDeleteNote };
 });
 
 module.exports = {
     mockGetNotes: mockGetNotes,
-    mockAddNotes: mockAddNotes,
+    mockAddNote: mockAddNote,
+    mockDeleteNote:  mockDeleteNote,
     mock: mock
 };

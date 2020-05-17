@@ -67,6 +67,24 @@ describe("App", () => {
         });
     });
 
+    describe("DELETE /api/notes/:id route", () => {
+        beforeAll(() => {
+            Store.mockImplementation(() => {
+                return {
+                    deleteNote: () => true
+                };
+            });
+        });
+
+        it("should respond with true", async () => {
+            const id = "3k94f850-967c-11ea-a6gc-abda3dc51129";
+            const response = await request.delete("/api/notes/" + id);
+
+            expect(response.status).toBe(200);
+            expect(response.body).toHaveProperty("ok");
+        });
+    });
+
     describe("Error GET /api/notes route", () => {
         beforeAll(() => {
             Store.mockImplementation(() => {
@@ -94,6 +112,23 @@ describe("App", () => {
 
         it("should return error", async () => {
             const response = await request.post("/api/notes");
+
+            expect(response.status).toBe(500);
+        });
+    });
+
+    describe("Error DELETE /api/notes/:id route", () => {
+        beforeAll(() => {
+            Store.mockImplementation(() => {
+                return {
+                    deleteNote: () => { throw new Error("something bad happened") }
+                };
+            });
+        });
+
+        it("should return error", async () => {
+            const id = "3k94f850-967c-11ea-a6gc-abda3dc51129";
+            const response = await request.delete("/api/notes/" + id);
 
             expect(response.status).toBe(500);
         });
